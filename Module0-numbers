@@ -1,0 +1,17 @@
+import random
+imagine = 0
+number = random.randint(1, 100)
+print ('Я загадал число между 1 и 100. Сможешь угадать за 5 попыток? Посмотрим на сколько ты везучий!'.format(imagine))
+while imagine < 5:
+    guess = int(input('Введи число: '))
+    imagine += 1
+    if guess < number:
+        print ('Твое число меньше того, что я загадал.')
+    if guess > number:
+        print ('Твое число больше загаданного мной.')
+    if guess == number:
+        break
+if guess == number:
+    print ('Круто! Ты угадал мое число, использовав {1} попыток! А ты везунчик!'.format(imagine))
+else:
+    print ('Везение не твой конек! Я загадал число {0}'.format(number))
